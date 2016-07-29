@@ -5,3 +5,11 @@ modules
 var app = angular.module('store', [ ]);
 [ ] is for dependencies (here we have none)
 expressions is to insert dynamic values into the HTML
+wrap the JavaScrip in a closure is a good habit
+controllers define our app's behavior by defining functions and values
+<div ng-controller="StoreController as store">
+ng-controller est la directive
+StoreController le nom du controller
+et store est l'alias
+we have access to the properties INSIDE the div
+the scope of the controller is only INSIDE the div
