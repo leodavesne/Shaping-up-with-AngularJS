@@ -36,9 +36,39 @@ pour les images, utiliser le ng-source directive
 <div class="gallery" ng-show="{{product.images.length}}">
 length lorsqu'on a un array
 ng-click directive
+ng-model
+ng-submit allows us to call a function when the form is submitted
+form validations
+turn off default HTML validation by adding the novalidate at the end of the form tag
+mark required fields by adding the required attribute
+<div>reviewForm is {{reviewForm.$valid}}</div>, $valid est built-in dans Angular (ça va avec)
+default classes added in an input email: ng-pristine, ng-invalid, ng-dirty, ng-valid (ajoutées par défaut par Angular)
+Angular has built-in validations for common input types: email, url, number (avec minimum et maximum)
+
 expressions define a 2-way data binding: expressions are re-evaluated when a property changes!
 <div class="panel" ng-show="tab === 1">... pour afficher le tab en question quand tab est à 1
 the ng-init directive allows us to evaluate an expression in the current scope
 <section ng-init="tab = 1">...
 <li ng-class="{ active:tab === 1 }">... expression to evaluate, if true, set class to "active, otherwise nothing
 panel controller to extraire la logique d'affichage
+forms and models
+ng-model binds the form element value to the property
+ng is the core module and stands for Angular
+custom directives
+HTML snippets avec ng-include with simple quotes inside double quotes
+using ng-include: <h3 ng-include="'product-title.html'"></h3>
+custom directive: <product-title></product-title>
+directives allow you to wirte HTML that expresses the behavior of your application
+expressness with custom directives
+app.directive('productTitle', function() {
+	return {
+		restrict: 'E', // type of the directive, E is for element
+		templateUrl: 'product-title.html' // url of a template
+	};
+});
+some browsers don't like self-closing tags when using custom elements, so we don't use them
+restrict: 'A', // A for Attribute
+with Angular, we can understand more directly what is the intent behing the HTML code
+Element Directive: <product-title></product-title>
+Attribute Directive: <h3 product-title></h3>
+directive controllers
