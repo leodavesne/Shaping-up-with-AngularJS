@@ -33,3 +33,12 @@ orderBy: <li ng-repeat="product in store.products | orderBy:'-price'">
 le minus sign devant price c'est pour ordonner en mode descendant
 pour les images, utiliser le ng-source directive
 <img ng-src="{{product.images[0].full}}" />
+<div class="gallery" ng-show="{{product.images.length}}">
+length lorsqu'on a un array
+ng-click directive
+expressions define a 2-way data binding: expressions are re-evaluated when a property changes!
+<div class="panel" ng-show="tab === 1">... pour afficher le tab en question quand tab est à 1
+the ng-init directive allows us to evaluate an expression in the current scope
+<section ng-init="tab = 1">...
+<li ng-class="{ active:tab === 1 }">... expression to evaluate, if true, set class to "active, otherwise nothing
+panel controller to extraire la logique d'affichage
