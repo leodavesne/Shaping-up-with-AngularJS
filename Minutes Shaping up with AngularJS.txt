@@ -13,3 +13,10 @@ StoreController le nom du controller
 et store est l'alias
 we have access to the properties INSIDE the div
 the scope of the controller is only INSIDE the div
+directives, comme ng-show="store.product.canPurchase" par exemple
+AngularJS va interpréter le pas de valeur comme un false
+ng-hide, ng-repeat
+directives: HTML annotations that trigger JavaScript behaviors
+modules: where our application components live
+controllers: where we add application behavior
+expressions: how values get displayed within the page
