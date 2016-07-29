@@ -1,0 +1,4 @@
+160729________________________
+JSON pour recharger des éléments de la page, comme avec les applications mobiles qui consomment des APIs
+directives: bind behaviors
+modules
