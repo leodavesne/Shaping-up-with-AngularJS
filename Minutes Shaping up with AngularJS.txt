@@ -2,3 +2,6 @@
 JSON pour recharger des éléments de la page, comme avec les applications mobiles qui consomment des APIs
 directives: bind behaviors
 modules
+var app = angular.module('store', [ ]);
+[ ] is for dependencies (here we have none)
+expressions is to insert dynamic values into the HTML
