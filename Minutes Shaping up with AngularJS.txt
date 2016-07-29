@@ -20,3 +20,16 @@ directives: HTML annotations that trigger JavaScript behaviors
 modules: where our application components live
 controllers: where we add application behavior
 expressions: how values get displayed within the page
+filters, directives, and cleaner code
+directives: ng-app, ng-controller, ng-show/ng-hide, ng-repeat
+pipe: send the output into
+{{product.price | currency}}
+formatting with filters: {{data | filter:options}}
+date: {{'1388123412323' | date:'MM/dd/yyyy @ h:mma'}}
+uppercase & lowercase: {{'octogon gem' | uppercase}}
+limitTo: {{'My Description' | limitTo:8}}
+aussi utile avec un ng-repeat: <li ng-repeat="product in store.products | limitTo:3">\
+orderBy: <li ng-repeat="product in store.products | orderBy:'-price'">
+le minus sign devant price c'est pour ordonner en mode descendant
+pour les images, utiliser le ng-source directive
+<img ng-src="{{product.images[0].full}}" />
