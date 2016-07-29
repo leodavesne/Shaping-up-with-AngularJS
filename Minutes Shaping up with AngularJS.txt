@@ -1,4 +1,5 @@
 160729________________________
+https://www.codeschool.com/courses/shaping-up-with-angular-js
 JSON pour recharger des éléments de la page, comme avec les applications mobiles qui consomment des APIs
 directives: bind behaviors
 modules
@@ -72,3 +73,19 @@ with Angular, we can understand more directly what is the intent behing the HTML
 Element Directive: <product-title></product-title>
 Attribute Directive: <h3 product-title></h3>
 directive controllers
+dependencies
+modules
+on extrait la logique des produits de app.js qu'on met dans products.js et on crée un module : var app = angular.module('store-products', [ ]);
+different closure means different app variable (between app.js and products.js)
+in the app.js file, on ajoute la dépendance pour faire le lien : var app = angular.module('store', ['store-products']);
+et inclure le fichier products.js dans le head du HTML
+split modules based on functionalities
+services: remplir les tableaux à partir d'une API externe avec du JSON
+built-in services: $http, $log, $filter
+$http({ method: 'GET', url: '/products.json' });
+$http.get('/products.json', { apiKey: 'myApiKey' });
+both return a Promise object with .success() and .error()
+the JSON is automatically decoded into JavaScript objects with Angular!
+app.controller('SomeController', [ '$http', function($http){ // en fait c'est de la dependency injection!
+
+} ]);
